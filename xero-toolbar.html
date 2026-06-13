@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yuzu Toolbar for Xero — Keyboard Shortcuts & Command Palette</title>
+<meta name="description" content="A Chrome extension that adds keyboard shortcuts and a Ctrl+K command palette to Xero. Jump to any screen, report or organisation in one keystroke. Free palette and hotkeys; Pro adds an organisation switcher and sidebar for multi-client accountants.">
+<link rel="canonical" href="https://yuzutools.github.io/xero-toolbar.html">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 48px 24px; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #1f2328; background: #fffdf5; max-width: 760px; margin-inline: auto;
+  }
+  a { color: #9a6b00; }
+  .logo { width: 56px; height: 56px; border-radius: 14px; background: #f2c335; color: #3c2f12;
+    display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 700; }
+  h1 { margin: 20px 0 8px; font-size: 32px; line-height: 1.2; }
+  .lede { font-size: 19px; color: #555; margin: 0 0 8px; }
+  .sub { color: #6b7280; font-size: 15px; margin: 0 0 24px; }
+  .btn {
+    display: inline-block; background: #f2c335; color: #3c2f12; font-weight: 600;
+    padding: 12px 22px; border-radius: 10px; text-decoration: none; font-size: 16px;
+  }
+  .btn:hover { background: #e6b51f; }
+  .shot { width: 100%; border: 1px solid #e5e0d0; border-radius: 14px; margin: 28px 0; display: block; }
+  h2 { margin: 40px 0 6px; font-size: 22px; }
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 20px 0; }
+  .feature { border: 1px solid #e5e0d0; border-radius: 14px; padding: 18px 20px; }
+  .feature h3 { margin: 0 0 6px; font-size: 17px; }
+  .feature p { margin: 0; color: #444; font-size: 15px; }
+  .feature .pro { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em;
+    color: #3c2f12; background: #f2c335; border-radius: 5px; padding: 1px 7px; margin-left: 6px; vertical-align: 2px; }
+  kbd { background: #f3efe2; border: 1px solid #ddd6c2; border-bottom-width: 2px;
+    border-radius: 6px; padding: 1px 7px; font-size: 13.5px; font-family: inherit; white-space: nowrap; }
+  .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 20px 0; }
+  .plan { border: 1px solid #e5e0d0; border-radius: 14px; padding: 22px; }
+  .plan.pro { border-color: #f2c335; border-width: 2px; }
+  .plan h3 { margin: 0 0 2px; font-size: 18px; }
+  .plan .price { font-size: 26px; font-weight: 700; margin: 0 0 12px; }
+  .plan .price span { font-size: 14px; font-weight: 400; color: #6b7280; }
+  .plan ul { margin: 0; padding-left: 18px; color: #444; font-size: 15px; }
+  .plan li { margin: 4px 0; }
+  .trust { border: 1px solid #e5e0d0; border-radius: 14px; padding: 18px 20px; margin: 24px 0; color: #444; font-size: 15px; }
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid #e5e0d0; font-size: 13px; color: #8a8a8a; }
+  footer a { color: inherit; }
+  @media (max-width: 560px) { .features, .pricing { grid-template-columns: 1fr; } }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1d1f23; color: #e6e6e6; }
+    a { color: #f2c335; }
+    .lede { color: #c9ced6; }
+    .shot, .feature, .plan, .trust { border-color: #3d4043; }
+    .feature p, .plan ul, .trust { color: #b9bec6; }
+    kbd { background: #2a2d33; border-color: #44484f; }
+    footer { border-color: #3d4043; }
+  }
+</style>
+</head>
+<body>
+  <div class="logo">Yz</div>
+  <h1>Yuzu Toolbar for Xero</h1>
+  <p class="lede">Keyboard shortcuts and a Ctrl+K command palette for Xero. Jump to any screen, report or organisation in one keystroke.</p>
+  <p class="sub">Chrome extension for accountants and bookkeepers who live in Xero all day.</p>
+  <p><a class="btn" href="https://chromewebstore.google.com/detail/lhpdhhlogegcafoadinjaaikmlkjnaki">Add to Chrome — free</a></p>
+
+  <img class="shot" src="xero-shot-palette.png" alt="The Yuzu command palette open over Xero: type a few letters, hit Enter, jump anywhere.">
+
+  <h2>What it does</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>Command palette</h3>
+      <p>Press <kbd>Ctrl+K</kbd> (<kbd>⌘K</kbd> on Mac) on any Xero page, type a few letters and land on any of ~40 screens, settings or reports in a second.</p>
+    </div>
+    <div class="feature">
+      <h3>Custom hotkeys</h3>
+      <p>Pin the screens you open fifty times a day to <kbd>Ctrl+Alt+1…9</kbd> and open them instantly, from anywhere in Xero.</p>
+    </div>
+    <div class="feature">
+      <h3>Every report, directly</h3>
+      <p>P&amp;L, Balance Sheet, Aged Receivables and more — open the exact report from the keyboard, skipping the report centre Xero's own search can't reach.</p>
+    </div>
+    <div class="feature">
+      <h3>Organisation switcher <span class="pro">PRO</span></h3>
+      <p>Work across several client organisations? Switch between them right from the palette — the fastest way to change organisations in Xero.</p>
+    </div>
+    <div class="feature">
+      <h3>Quick-links sidebar <span class="pro">PRO</span></h3>
+      <p>Prefer the mouse? A slim panel on the edge of every Xero page with all destinations and your pinned links on top.</p>
+    </div>
+    <div class="feature">
+      <h3>Works everywhere</h3>
+      <p>On every Xero screen including the reports area, with any keyboard layout. Built on Xero's own stable URLs, not fragile page hacks.</p>
+    </div>
+  </div>
+
+  <img class="shot" src="xero-shot-reports.png" alt="Opening a specific Xero report directly from the Yuzu command palette.">
+
+  <h2>Free and Pro</h2>
+  <div class="pricing">
+    <div class="plan">
+      <h3>Free</h3>
+      <p class="price">$0</p>
+      <ul>
+        <li>Command palette</li>
+        <li>All ~40 destinations</li>
+        <li>Custom hotkeys</li>
+        <li>Direct report links</li>
+        <li>Free forever, no account</li>
+      </ul>
+    </div>
+    <div class="plan pro">
+      <h3>Pro</h3>
+      <p class="price">$12<span> / month · 7-day free trial</span></p>
+      <ul>
+        <li>Everything in Free</li>
+        <li>Organisation switcher</li>
+        <li>Quick-links sidebar</li>
+        <li>Built for multi-client firms</li>
+        <li>Cancel any time</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="trust">
+    <strong>Private by design.</strong> The free features collect nothing and make no network requests — no analytics, no telemetry. The extension never reads your accounting data and runs only on Xero's own domains; your settings stay in your browser. The optional Pro plan is handled by ExtensionPay and Stripe, so your card details are never visible to the extension.
+  </div>
+
+  <p><a class="btn" href="https://chromewebstore.google.com/detail/lhpdhhlogegcafoadinjaaikmlkjnaki">Add to Chrome — free</a></p>
+
+  <footer>
+    <a href="index.html">Yuzu Tools</a> ·
+    <a href="xero-keyboard-shortcuts.html">Xero shortcuts guide</a> ·
+    <a href="xero-toolbar-privacy.html">Privacy policy</a> ·
+    <a href="mailto:yuzutools@gmail.com">Support</a> ·
+    <a href="tokushoho.html">特定商取引法に基づく表記</a><br><br>
+    Yuzu Toolbar for Xero is an independent product by Yuzu Tools. It is not affiliated with, endorsed by, or sponsored by Xero Limited. Xero is a trademark of Xero Limited.
+  </footer>
+</body>
+</html>
