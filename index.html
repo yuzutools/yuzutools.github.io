@@ -22,6 +22,9 @@
   .card-head { display: flex; align-items: center; gap: 13px; margin-bottom: 10px; }
   .card-head h2 { margin: 0; }
   .picon { width: 46px; height: 46px; border-radius: 11px; flex: none; }
+  .linkcard { position: relative; cursor: pointer; }
+  .linkcard .stretch::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+  .linkcard .links a:not(.stretch) { position: relative; z-index: 2; }
   .card p { margin: 0 0 10px; color: #444; }
   .links a { color: #9a6b00; text-decoration: none; margin-right: 16px; }
   .links a:hover { text-decoration: underline; }
@@ -51,12 +54,11 @@
     </p>
   </div>
 
-  <div class="card">
-    <div class="card-head"><img class="picon" src="icon-xero.png" alt=""><h2><a href="xero-toolbar.html">Yuzu Toolbar for Xero</a></h2></div>
+  <div class="card linkcard">
+    <div class="card-head"><img class="picon" src="icon-xero.png" alt=""><h2><a class="stretch" href="xero-toolbar.html">Yuzu Toolbar for Xero</a></h2></div>
     <p>A command palette, hotkeys, and a quick-links sidebar for Xero. Jump to any invoice, report,
     or contact in two keystrokes — built for accountants and bookkeepers who live in Xero all day.</p>
     <p class="links">
-      <a href="xero-toolbar.html">Product page</a>
       <a href="https://chromewebstore.google.com/detail/lhpdhhlogegcafoadinjaaikmlkjnaki">Add to Chrome</a>
       <a href="xero-toolbar-privacy.html">Privacy policy</a>
     </p>
