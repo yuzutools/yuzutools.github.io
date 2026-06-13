@@ -10,14 +10,18 @@
     margin: 0; padding: 48px 24px; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     color: #1f2328; background: #fffdf5; max-width: 720px; margin-inline: auto;
   }
-  .logo { width: 56px; height: 56px; border-radius: 14px; background: #f2c335; color: #3c2f12;
-    display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 700; }
+  .logo { width: 64px; height: 64px; border-radius: 16px; display: block; }
   h1 { margin: 18px 0 4px; font-size: 28px; }
   .tag { color: #6b7280; margin: 0 0 32px; }
-  .card { border: 1px solid #e5e0d0; border-radius: 14px; padding: 20px 22px; margin: 16px 0; }
+  .card { border: 1px solid #e5e0d0; border-radius: 14px; padding: 20px 22px; margin: 16px 0;
+    transition: box-shadow .15s ease, transform .15s ease; }
+  .card:hover { box-shadow: 0 8px 24px rgba(60,47,18,.09); transform: translateY(-2px); }
   .card h2 { margin: 0 0 6px; font-size: 19px; }
   .card h2 a { color: inherit; text-decoration: none; }
   .card h2 a:hover { text-decoration: underline; }
+  .card-head { display: flex; align-items: center; gap: 13px; margin-bottom: 10px; }
+  .card-head h2 { margin: 0; }
+  .picon { width: 46px; height: 46px; border-radius: 11px; flex: none; }
   .card p { margin: 0 0 10px; color: #444; }
   .links a { color: #9a6b00; text-decoration: none; margin-right: 16px; }
   .links a:hover { text-decoration: underline; }
@@ -26,18 +30,19 @@
   @media (prefers-color-scheme: dark) {
     body { background: #1d1f23; color: #e6e6e6; }
     .card { border-color: #3d4043; }
+    .card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.4); }
     .card p { color: #b9bec6; }
     .links a { color: #f2c335; }
   }
 </style>
 </head>
 <body>
-  <div class="logo">Aa</div>
+  <img class="logo" src="yuzu-logo.png" alt="Yuzu Tools">
   <h1>Yuzu Tools</h1>
   <p class="tag">Small, honest browser tools. No tracking, no bloat.</p>
 
   <div class="card">
-    <h2>Double-Click Dictionary</h2>
+    <div class="card-head"><img class="picon" src="icon-dictionary.png" alt=""><h2>Double-Click Dictionary</h2></div>
     <p>Double-click any word on any page to see its definition instantly. The entire 83,000-word
     dictionary ships inside the extension — 100% offline, nothing you read ever leaves your device.</p>
     <p class="links">
@@ -47,7 +52,7 @@
   </div>
 
   <div class="card">
-    <h2><a href="xero-toolbar.html">Yuzu Toolbar for Xero</a></h2>
+    <div class="card-head"><img class="picon" src="icon-xero.png" alt=""><h2><a href="xero-toolbar.html">Yuzu Toolbar for Xero</a></h2></div>
     <p>A command palette, hotkeys, and a quick-links sidebar for Xero. Jump to any invoice, report,
     or contact in two keystrokes — built for accountants and bookkeepers who live in Xero all day.</p>
     <p class="links">
@@ -58,17 +63,18 @@
   </div>
 
   <div class="card">
-    <h2>Yuzu Toolbar for Clio</h2>
+    <div class="card-head"><img class="picon" src="icon-clio.png" alt=""><h2>Yuzu Toolbar for Clio</h2></div>
     <p>A command palette, timer hotkey and quick actions for Clio. Log time, start timers and jump
     to any screen in a keystroke — built for lawyers and legal staff who bill by the minute.</p>
     <p class="links">
+      <a href="https://chromewebstore.google.com/detail/yuzu-toolbar-for-clio-sho/odlndbnbcmkejpbekedoiacghdkaamea">Add to Chrome</a>
       <a href="clio-toolbar-privacy.html">Privacy policy</a>
       <a href="mailto:yuzutools@gmail.com">Support</a>
     </p>
   </div>
 
   <div class="card">
-    <h2>Yuzu Toolbar for Procore</h2>
+    <div class="card-head"><img class="picon" src="icon-procore.png" alt=""><h2>Yuzu Toolbar for Procore</h2></div>
     <p>A command palette, hotkeys and quick actions for Procore. Jump to any tool or project, or
     create an RFI, submittal or punch item in a keystroke — built for construction and project teams
     who navigate Procore all day.</p>
