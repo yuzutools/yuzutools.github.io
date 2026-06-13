@@ -23,7 +23,10 @@
   <p class="date">Effective date: June 13, 2026</p>
 
   <h2>The short version</h2>
-  <p><strong>We collect nothing. We transmit nothing. Everything happens in your browser.</strong></p>
+  <p><strong>We never read your accounting data, and we never see your card or email.</strong>
+  The free features make no network requests at all. The only time the extension contacts an
+  outside server is to check your subscription status, and only if you choose to start the
+  optional Pro plan.</p>
 
   <h2>What the extension does</h2>
   <p>Yuzu Toolbar for Xero adds a command palette, keyboard shortcuts and a link sidebar to the
@@ -31,10 +34,21 @@
   Xero page — exactly as if you had clicked through Xero's own menus.</p>
 
   <h2>Data collection</h2>
-  <p>The extension does <strong>not</strong> collect, store, transmit, sell, or share any personal
-  data, accounting data, or browsing history. It makes <strong>no network requests</strong> of its
-  own: no analytics, no telemetry, no remote servers, no accounts. It never reads your accounting
-  records, invoices, contacts, or any other content of your Xero organisation.</p>
+  <p>The extension does <strong>not</strong> collect, store, sell, or share your personal data,
+  accounting data, or browsing history. It never reads your accounting records, invoices, contacts,
+  or any other content of your Xero organisation, and it sends none of that anywhere. The free
+  features (command palette, keyboard shortcuts, link sidebar) make <strong>no network requests</strong>
+  of their own: no analytics, no telemetry, no tracking.</p>
+
+  <h2>Payments (optional Pro plan)</h2>
+  <p>Pro is optional. If you start a Pro trial or subscribe, payments are handled by
+  <a href="https://extensionpay.com">ExtensionPay</a> and <a href="https://stripe.com">Stripe</a>.
+  Your email and card details are entered on their secure pages and are <strong>never visible to
+  this extension</strong>. To unlock Pro features, the extension stores a random, anonymous key on
+  your device and uses it to ask ExtensionPay one question — whether your subscription is active.
+  No accounting data, and nothing about how you use Xero, is ever sent to ExtensionPay, Stripe, or
+  anyone else. See the <a href="https://extensionpay.com/privacy">ExtensionPay privacy policy</a>
+  for how they handle payment information.</p>
 
   <h2>Settings</h2>
   <p>Your preferences (pinned destinations, the list of organisations you add for the
@@ -46,9 +60,11 @@
   We have no access to it.</p>
 
   <h2>Permissions</h2>
-  <p>The extension runs only on Xero's own domains (<code>go.xero.com</code> and
-  <code>reporting.xero.com</code>) — it has no access to any other website. It requests
-  <code>storage</code> for the settings above. Nothing else.</p>
+  <p>The extension's features run on Xero's own domains (<code>go.xero.com</code> and
+  <code>reporting.xero.com</code>) and it never reads any other website's content. It also includes
+  a small component on <code>extensionpay.com</code>, used solely for the optional Pro payment flow
+  described above. It requests <code>storage</code> for your settings and the anonymous Pro key.
+  Nothing else.</p>
 
   <h2>Affiliation</h2>
   <p>Yuzu Toolbar for Xero is an independent product by Yuzu Tools. It is not affiliated with,
